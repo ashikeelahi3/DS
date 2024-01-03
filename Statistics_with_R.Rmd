@@ -1,0 +1,45 @@
+# Statistics
+
+## 1. Probability
+
+### 1.1 Sets
+
+#### Basic Operations
+
+| Operator Name  | Sybol          | Function          |
+|:---------------|:----------------|:------------------|
+| Union          | $x \cup y$      | `union(x, y)`     |
+| Intersection   | $x \cap y$      | `intersect(x, y)` |
+| Difference     | $x - y$         | `setdiff(x, y)`   |
+| Equality (T,F) | $x \subseteq y$ | `setequal(x, y)`  |
+
+*Example*
+
+```{r 1.1.1 Set}
+x <- c(1, 2, 4, 5)
+y <- c(1, 2, 3)
+
+union(x, y)
+intersect(x, y)
+setdiff(x, y)
+setequal(x, y)
+```
+
+#### De Morgan's Laws
+
+1.  $$(A \cup B)^c = A^c \cap B^c$$
+2.  $$(A \cap B)^c = A^c \cup B^c$$
+
+### 1.2 Permutation and combination 
+
+| Name        | Formula                      | R Code           |
+|:------------|:-----------------------------|:-----------------|
+| Factorial   |$n!$                          |```factorial(n)```|
+| Permutation |$^n P_r = \frac{n!}{(n-r)!}$  |```choose(n,r)*factorial(r)```|
+| Combination |$^n C_r = \frac{n!}{r!(n-r)!}$|```choose(n, r)```|
+
+#### Binomial coefficients and binomial expansions
+
+$$(a+b)^n = \sum_{k=0}^n \binom{n}{r} a^k b^{n-k}$$
+$$\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1}$$
+
